@@ -1,6 +1,7 @@
 package com.assignment.one;
 
 public class Assignment1 {
+	
 	public int sort(int number) {
 		// TODO Auto-generated method stub
 		int sorted = 1;
@@ -39,7 +40,7 @@ public class Assignment1 {
 		return sorted;
 	}
 
-	public static int sumOfEvenNumber(String num) {
+	public int sumOfEvenNumber(String num) {
 		String stringNumber = num;
 
 		// Find the length of String
@@ -63,7 +64,7 @@ public class Assignment1 {
 		return even;
 	}
 
-	public static int sumOfOddNumber(String num) {
+	public int sumOfOddNumber(String num) {
 		String stringNumber = num;
 
 		// Find the length of String
@@ -86,5 +87,20 @@ public class Assignment1 {
 		}
 		return odd;
 
+	}
+	
+	public static String spacesInBetweenNumber(int number) {
+		int num = number;
+		int temp;
+		StringBuffer tempResult = new StringBuffer();
+		while (num > 0) {
+			temp = num % 10;
+			num = num / 10;
+			tempResult.append(temp+"   ");
+		}
+		StringBuffer result = tempResult.reverse();
+		//System.out.println(result);
+		String finalResult = result.substring(3);
+		return finalResult;
 	}
 }

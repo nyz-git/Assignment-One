@@ -1,6 +1,6 @@
 package com.assignment.one.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -34,4 +34,9 @@ public class AssignmentOneTestCases {
 		assertEquals(6, odd);
 	}
 
+	@Test
+	public void spacesInNumber(){
+		String result = assignment1.spacesInBetweenNumber(2345);
+		assertEquals("2   3   4   5", result);
+	}
 }
